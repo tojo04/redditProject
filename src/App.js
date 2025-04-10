@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './CommentSection.css';
+import CommentSection, { CommentProvider } from './CommentSection';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Reddit-like Comment Section</h1>
       </header>
+      <main>
+        <CommentProvider>
+          <CommentSection />
+        </CommentProvider>
+      </main>
+      <footer className="App-footer">
+        <p>Comment Section Project &copy; 2025</p>
+      </footer>
     </div>
   );
 }
