@@ -13,9 +13,6 @@ functionality.
 - Responsive design for various screen sizes
 - Preloaded dummy data for demonstration
 
-## Demo
-
-[Live Demo Link](https://your-demo-link-here.com)
 
 ## Tech Stack
 
@@ -29,7 +26,7 @@ functionality.
 ### Prerequisites
 
 - Node.js (v14.0.0 or higher)
-- npm (v6.0.0 or higher) or yarn (v1.22.0 or higher)
+- npm (v6.0.0 or higher) 
 
 ### Setup Instructions
 
@@ -56,43 +53,21 @@ functionality.
    http://localhost:3000
    ```
 
-## Project Structure
-
-```
-reddit-like-comments/
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── Comment.js
-│   │   ├── CommentForm.js
-│   │   ├── CommentList.js
-│   │   └── ...
-│   ├── context/
-│   │   └── CommentContext.js
-│   ├── data/
-│   │   └── dummyComments.js
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── package.json
-└── README.md
-```
-
 ## Usage
 
 ### Adding a Top-Level Comment
 
 1. Navigate to the main comment form at the bottom of the page
-2. Enter your comment text
+2. Enter your name (default is anonymous)
+3. Enter your comment text
 3. Click "Comment" to post your comment
 
 ### Replying to an Existing Comment
 
 1. Click the "Reply" button under the comment you want to respond to
-2. Enter your reply in the comment form that appears
-3. Click "Reply" to post your reply
+2. Enter your name
+3. Enter your reply in the comment form that appears
+4. Click "Reply" to post your reply
 
 ### Expanding/Collapsing Comment Threads
 

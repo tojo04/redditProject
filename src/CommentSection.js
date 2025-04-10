@@ -75,7 +75,7 @@ const CommentContext = createContext();
 export const CommentProvider = ({ children }) => {
   const [comments, setComments] = useState(dummyComments);
   const [expandedComments, setExpandedComments] = useState({});
-  const [currentUser, setCurrentUser] = useState("Anonymous"); // For simplicity, we'll use a fixed user
+  const [currentUser] = useState("Anonymous"); // For simplicity, we'll use a fixed user
   
   // Add a new comment
   const addComment = (parentId, author, content) => {
@@ -109,7 +109,7 @@ export const CommentProvider = ({ children }) => {
   
   // Delete a comment and all its replies
   const deleteComment = (commentId) => {
-    // Helper function to get all child comment IDs recursively
+    
     const getChildIds = (parentId) => {
       const children = comments.filter(c => c.parentId === parentId);
       const childIds = children.map(c => c.id);
@@ -122,7 +122,7 @@ export const CommentProvider = ({ children }) => {
     // All IDs to delete (including the comment itself)
     const idsToDelete = [commentId, ...childIds];
     
-    // Filter out all comments with IDs in the deletion list
+   
     setComments(prevComments => 
       prevComments.filter(comment => !idsToDelete.includes(comment.id))
     );
@@ -170,7 +170,7 @@ export const useComments = () => useContext(CommentContext);
 const CommentSection = () => {
   const { comments } = useComments();
   
-  // Get top-level comments (no parent)
+  
   const topLevelComments = comments.filter(comment => comment.parentId === null);
   
   return (
@@ -184,7 +184,7 @@ const CommentSection = () => {
 
 // CommentList component - Displays a list of comments
 const CommentList = ({ comments, parentId = null }) => {
-  const { comments: allComments } = useComments();
+   useComments();
   
   // Sort comments by timestamp, newest first
   const sortedComments = [...comments].sort((a, b) => 
