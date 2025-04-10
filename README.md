@@ -1,6 +1,6 @@
 # Reddit-like Nested Comment Section
 
-A React-based implementation of a threaded comment system similar to Reddit. It features  hierarchical comment structures with reply functionality. I Also added the Upvote/Downvote
+A React  implementation of a threaded comment system similar to Reddit. It features  hierarchical comment structures with reply functionality. I Also added the Upvote/Downvote
 functionality.
 
 ## Features
