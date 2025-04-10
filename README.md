@@ -10,9 +10,11 @@ functionality.
 - Reply to any existing comment
 - Expandable/collapsible comment threads
 - Upvote/Downvote functionality
-- Responsive design for various screen sizes
+- Edit/Delete functionality for comments
 - Preloaded dummy data for demonstration
 
+## Demo
+[Live Demo](https://redditproject-teijas.netlify.app/)
 
 ## Tech Stack
 
